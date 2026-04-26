@@ -1,0 +1,168 @@
+.onboarding-page {
+  min-height: 100vh;
+  padding: 100px 2rem 3rem;
+  background: var(--gradient-hero);
+}
+
+.onboarding-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Progress bar */
+.onboarding-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.progress-line {
+  position: absolute;
+  top: 18px;
+  left: 40px;
+  right: 40px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  z-index: 0;
+}
+
+.progress-line-fill {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1;
+}
+
+.step-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: var(--bg-secondary);
+  border: 2px solid var(--glass-border);
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.progress-step.active .step-dot {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+}
+
+.progress-step.current .step-dot {
+  box-shadow: 0 0 15px rgba(124, 92, 252, 0.5);
+}
+
+.step-name {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.progress-step.active .step-name {
+  color: var(--text-secondary);
+}
+
+/* Steps */
+.onboarding-step {
+  text-align: center;
+}
+
+.onboarding-step h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.step-desc {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.option-btn {
+  padding: 1.2rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.option-btn:hover {
+  border-color: var(--accent-primary);
+}
+
+.option-btn.selected {
+  border-color: var(--accent-primary);
+  background: rgba(124, 92, 252, 0.15);
+  box-shadow: 0 0 20px rgba(124, 92, 252, 0.2);
+}
+
+.option-btn.big {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.opt-icon {
+  font-size: 2rem;
+}
+
+.opt-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.opt-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.option-grid.small {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.sub-options {
+  margin: 1.5rem 0;
+}
+
+.sub-options h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.step-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}

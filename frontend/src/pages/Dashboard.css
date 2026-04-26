@@ -1,0 +1,244 @@
+.dashboard-page {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dash-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.dash-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
+
+/* Stats */
+.dash-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-value.accent-green {
+  background: linear-gradient(135deg, #00d4aa, #00b894);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.stat-value.accent-purple {
+  background: linear-gradient(135deg, #7c5cfc, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.stat-value.accent-pink {
+  background: linear-gradient(135deg, #ff6b9d, #f06292);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.stat-label-d {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Semester blocks */
+.semester-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.semester-block {
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.semester-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.sem-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sem-number {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.sem-count {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.sem-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sem-toggle {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.semester-body {
+  padding: 0 1.5rem 1.5rem;
+}
+
+/* Subject rows */
+.subject-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.subject-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: var(--transition);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.subject-row:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.subj-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.subj-code {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  min-width: 60px;
+}
+
+.subj-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.subj-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.subj-credits {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.subj-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 120px;
+}
+
+.subj-progress .progress-bar {
+  width: 80px;
+}
+
+.progress-pct {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  min-width: 35px;
+}
+
+.btn-tiny {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 6px;
+  background: rgba(124, 92, 252, 0.15);
+  color: var(--accent-primary);
+  border: 1px solid rgba(124, 92, 252, 0.2);
+  transition: var(--transition);
+}
+
+.btn-tiny:hover {
+  background: rgba(124, 92, 252, 0.3);
+}
+
+.track-info {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  background: var(--gradient-card);
+}
+
+.track-info h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.track-info p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .subject-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .subj-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
